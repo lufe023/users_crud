@@ -1,0 +1,136 @@
+:root{
+  --principal-color: #0F0F2D;
+  --secundary-color:#D3D3D3;
+  --third-color:#302F2F;
+  --fourth-color:#FFFFFF;
+  --fifth-color:#BDBDBD;
+  
+
+  --button-color: rgb(216, 93,93);
+  --button-bordercolor:#D93F3F;
+  --button-secundary-color:#F7F7F7;
+  --principal-button: #555A88;
+
+}
+
+body, html{
+
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+*{border: red solid 1px;}
+*/
+.AppTitle { grid-area: title; }
+.createUserButton { grid-area: menu; }
+.usersContainer { grid-area: card; }
+
+.App{
+  background-color:white;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-areas:
+    'title title title title title menu'
+    'card card card card card card';
+    align-items: center;
+    
+  
+  }
+
+
+
+.AppTitle{
+  color: var(--principal-color);
+
+  display: inline-block;
+}
+.createUserButton{
+cursor: pointer;
+  width: 100%;
+  color: white;
+  padding: 15px 30px;
+  border: 0;
+  background-color: var(--principal-button);
+}
+.createUserButton:hover{
+  box-shadow: 0 0 3px #000;
+}
+.usersContainer{
+width: 100%;
+display: grid;
+gap: 10px;
+grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+align-items: center;
+justify-content: center;
+
+
+}
+
+.Card__Users{
+
+  width: 270px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.userName{
+  color: var(--principal-color);
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+
+}
+
+.datails{
+  border-top: solid rgb(212, 212, 212) 1px;
+  border-bottom: solid rgb(212, 212, 212) 1px;
+padding: 15px 0px;
+margin: 0;
+
+}
+.datails li{
+  line-height: 25px;
+  margin-top: 10px;
+  color: var(--fifth-color);
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.datails li span{
+  display: block;
+  text-transform: none;
+  color: #000;
+}
+.Card__Tools{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.btn{
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 5px;
+  border: 0;
+  padding: 5px;
+}
+
+.btn:hover{
+box-shadow: 0 0 2px #000;
+}
+
+.delete{
+  color: white;
+  border: 1px solid #D93F3F;
+  background-color: var(--button-color);
+}
+
+.edit{
+  color: #c1c0c0;
+  border: 1px solid #c1c0c0;
+  background-color: var(--button-secundary-color);
+}
